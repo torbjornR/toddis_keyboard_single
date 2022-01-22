@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_ESC,       KC_TAB,    	LCTL(KC_F),   	LCTL(KC_A),    	LCTL(KC_Y), 	KC_DEL,
          LCTL(KC_T),  KC_LSFT,    	LCTL(KC_X),  	LCTL(KC_C), 	LCTL(KC_V), 	KC_RALT,
          RCS(KC_T),   KC_LCTRL,    	RCS(KC_TAB),    LCTL(KC_TAB),   LCTL(KC_Z), 	KC_F5,
-                           	                        KC_TAB,  	KC_ENT, 	KC_BSPC
+                           	                        KC_BSPC,  	KC_ENT, 	KC_TAB
     ), 
  [SYMBOLS] = LAYOUT(  // layer 0 : default
         // left hand
