@@ -74,17 +74,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,	_______,	KC_7,	KC_8,		KC_9,		_______,
 	    _______,	_______,	KC_4,	KC_5,		KC_6,		_______,  
         _______,	KC_0,		KC_1,	KC_2,		KC_3,		_______,
-										_______,	_______,	_______,
+										_______,	_______,	_______
     ),
  [_shift] = LAYOUT( // layer 2 : switching layer
     // left hand 
     _______,	_______,	_______,	_______,	_______,		_______,
     _______,	_______,	_______,	_______,	_______,		_______,
     _______,	_______,	_______,	_______,	_______,		_______,
-										_______,	TG(_SYMBOLS),   _______,
-
-
-
+										_______,	TG(_SYMBOLS),   _______
+	),
 };
  
 const rgblight_segment_t PROGMEM my_base_layer[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -92,7 +90,7 @@ const rgblight_segment_t PROGMEM my_base_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 );
 
 	const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{0, 2, HSV_RED}
+		{0, 2, HSV_BLUE}
 );
 
 	const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -102,7 +100,7 @@ const rgblight_segment_t PROGMEM my_base_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
 	my_base_layer,
 	my_layer1_layer,	
-	my_layer2_layer,	
+	my_layer2_layer	
 );
 
 
@@ -116,7 +114,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 void keyboard_post_init_user(void) {
 	rgblight_layers = my_rgb_layers;
 } 
-
 
 /*
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
